@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNCT University</title>
+     <link rel="icon"  href="logo.png">
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #9e9c9c98;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #login-container {
+            max-width: 400px;
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .main{
+            display: flex;
+            flex-direction: column;
+        }
+        .image{
+            max-width: 400px;
+            width: 100%;
+            border-radius: 5px;
+            box-sizing: border-box;
+        
+        }
+        .identity{
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            
+
+        }
+        #radio{
+            padding: 0;
+            margin :0;
+        }
+
+
+        img{
+            height : 100%;
+            width : 100%
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #04042f;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 40%;
+            border-radius: 3px;
+        }
+        p{
+            color: blue;
+        }
+        #SignUp{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="image">
+        <img src="image.png" alt="logo">
+    </div>
+    
+
+    <div id="login-container">
+        <div class="identity">
+            <label > Student Login</label>
+        </div>
+        <label for="username"></label>
+        <input type="text" id="username" placeholder="Login name" required>
+        <label for="password"></label>
+        <input type="password" id="password" placeholder="Password" required>
+        <div id="SingnUp">
+            <div><p>SingnUp(New User)</p></div>
+        <button onclick="authenticate()">Login >></button>
+        </div>
+        <div id="error-message"></div>
+    </div>
+</div>
+    <script>
+        function authenticate() {
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const errorMessage = document.getElementById('error-message');
+
+            const username = usernameInput.value;
+            const password = passwordInput.value;
+
+            // For simplicity, hardcoding a username and password. In a real application, this
+            // information should be stored securely on the server, and passwords should be hashed.
+            const validUsername = 'user';
+            const validPassword = 'password';
+
+            if (username === validUsername && password === validPassword) {
+                alert('Login successful!'); // Replace this with your desired action (redirect, etc.).
+            }          
+            
+            alert("Result : Failed to Clear Semester Exam");
+            tryAgain=confirm(" April fool :) ")  ;
+        }
+    </script>
+
+</body>
+</html>
